@@ -15,3 +15,8 @@ Yz-Filerの画像効果を動画に対して行うツールです
 | 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:sketch<br>　　　　(スケッチ風)　　　　|
  :----: | :----: | :----: 
 ![](./Watercolor.jpg) | ![](./Blackboard.jpg) | ![](./sketch.jpg) 
+
+## オプション
+| ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) |
+:--- | :--- | :--- | :--- | :--- 
+-m | --effect_mode | true | all |Effect mode<br> 0:Edge, 1:binarization, 2:Ternarization,<br> 3:Watercolor, 4:Blackboard, 5:sketch
