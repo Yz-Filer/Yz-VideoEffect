@@ -1,10 +1,10 @@
 # Yz-VideoEffect
 ## はじめに
-Yz-Filerの画像効果を動画に対して行うツールです
-速度改善のために、OpenCVに変更してるので、処理結果が変わってると思います
+Yz-Filerの画像効果を動画に対して行うツールです。  
+速度改善のために、OpenCVに変更してるので、処理結果が変わってると思います。
 
 ## インストール・設定
-- レジストリは使用してません。任意のディレクトリに解凍して下さい。
+- レジストリは使用してません。任意のディレクトリに解凍して下さい。  
 - アンインストールはディレクトリごと削除して下さい。
 
 ## 画像効果
@@ -40,7 +40,7 @@ Yz-Filerの画像効果を動画に対して行うツールです
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
 
 ## 実行方法
-オプションを複数指定する場合は、以下のような内容のbatファイルを作成した方が便利だと思います  
+オプションを複数指定する場合は、以下のような内容のbatファイルを作成した方が便利だと思います。  
 (batは「^」により、コマンドの途中で改行)
 ```
 Yz-VideoEffect.exe ^
@@ -53,9 +53,9 @@ Yz-VideoEffect.exe ^
 --luminance_mode 1 ^
 --stdout false
 ```
-上記コマンドかbatをDOS窓で実行すると、Windowが起動され動画が表示されます  
-このモード(--stdout false)では、動画を処理する都度、更新されるため再生速度は維持されません  
-実行後、DOS窓に以下のような内容が表示されます
+上記で作成したbatをDOS窓で実行すると、Windowが起動され動画が表示されます。  
+このモード(--stdout false)では、動画を処理する都度、更新されるため再生速度は維持されません。  
+実行後、DOS窓に以下のような内容が表示されます。
 ```
 --------------------
 [Input video]
@@ -73,7 +73,23 @@ Width:720
 Height:405
 --------------------
 ```
-「fps」と、「Back image」の「Width」「Height」が保存時に必要となります
+「fps」と、「Back image」の「Width」「Height」が保存時に必要となります。
 
 ## 保存方法
-
+「実行方法」で作成したbatを以下のように変更します
+```
+Yz-VideoEffect.exe ^
+--effect_mode 1 ^
+--input "hoge.mp4" ^
+--maxsize 0 ^
+--threshold 128 ^
+--edge_th1 300 ^
+--edge_th2 10 ^
+--luminance_mode 1 ^
+--stdout true ^
+ | ffmpeg -y -f rawvideo -pixel_format bgr24 -video_size 720x405 -framerate 29.97 -i - -an "out.mp4"
+```
+最後の2行を変更してます。「--stdout」を「true」に変更し、ffmpegにデータを渡します。  
+「video_size」と「framerate」に「実行方法」で確認した「Width」「Height」と「fps」を指定して下さい。  
+尚、ffmpegの保存用オプションは、ffmpegの解説HPなどを参照してください。  
+ここでは、解説しないです。
