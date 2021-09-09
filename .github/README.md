@@ -9,6 +9,7 @@ Yz-Filerの画像効果を動画に対して行うツールです。
 - 解凍時に作成されたディレクトリに、「OpenCvSharpExtern.zip」を解凍して下さい
 - ウィルスチェックは実施済みです
 - アンインストールはディレクトリごと削除して下さい。
+- 保存にはffmpegが必要となります
 
 ## 画像効果
  | 0:Edge<br>　　　　　　(エッジ)　　　　　　| 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化/漫画風) |
@@ -100,4 +101,19 @@ Yz-VideoEffect.exe ^
 ## 制限など
 - 音声は出力されません。
 - やっつけツールですんで、エラーハンドリングはやってません。
-- 本ツールは、MIT Licenseです。如何なる損害に対しても、保証も補償もしません。
+
+## ライブラリ類およびライセンス
+- 本ソフトウェア（Yz-VideoEffect）  
+  Copyright (c) 2021 Yz  
+  Released under the MIT license  
+  https://opensource.org/licenses/mit-license.php  
+  作者または著作権者は、本ソフトウェアに起因して被った直接的または間接的損害については一切責任を負わず、また保証/補償も出来ません
+  
+- OpenCVSharp  
+  Apacheライセンス バージョン2.0  
+  https://github.com/shimat/opencvsharp/blob/master/LICENSE
+
+- OpenCV  
+  Apacheライセンス バージョン2.0  
+  https://github.com/opencv/opencv/blob/master/LICENSE
+  
