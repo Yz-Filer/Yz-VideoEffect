@@ -18,5 +18,25 @@ Yz-Filerの画像効果を動画に対して行うツールです
 
 ## オプション
 | ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) |
-:--- | :--- | :--- | :--- | :--- 
--m | --effect_mode | true | all |Effect mode<br> 0:Edge, 1:binarization, 2:Ternarization,<br> 3:Watercolor, 4:Blackboard, 5:sketch
+:--- | :--- | :---: | :---: | :--- 
+-m | --effect_mode | true | all |Effect mode<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : sketch
+-i | --input | true | all | Full path of video file
+-s | --maxsize | - | all | Maximum size<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080)
+-b | --background | - | all | Full path of background image file
+-w | --video_width | - | all | Video width
+-h | --video_height | - | all | Video height
+-x | --left | - | all | Left
+-y | --top | - | all | Top
+-t | --threshold | - | Binarization | threshold(0-255) (Default:128)
+ |  |  |  | Watercolor | strength(0-100) (Default:70%)
+ |  |  |  | Blackboard | noise threshold(0-255) (Default:8)
+-u | --edge_th1 | - | Edge<br>binarization | Edge threshold1 (Default:300)
+-v | --edge_th2 | - | Edge<br>binarization | Edge threshold2 (Default:1000)
+-o | --ternarization_th1 | - | Ternarization | threshold1(0-255) (Default:85)
+-p | --ternarization_th2 | - | Ternarization | threshold2(0-255) (Default:170)
+-l | --luminance_mode | - | all | Luminance mode (0-2)
+-g | --sketch_gamma | - | Sketch | gamma value (Default:0.3)
+-n | --sketch_noise | - | Sketch | Updates the noise image frame by frame (Default:false)
+-z | --stdout | - | all | Output to standard output (Default:false)
+
+
