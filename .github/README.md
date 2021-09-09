@@ -49,7 +49,7 @@ Yz-VideoEffect.exe ^
 --maxsize 0 ^
 --threshold 128 ^
 --edge_th1 300 ^
---edge_th2 10 ^
+--edge_th2 1000 ^
 --luminance_mode 1 ^
 --stdout false
 ```
@@ -84,7 +84,7 @@ Yz-VideoEffect.exe ^
 --maxsize 0 ^
 --threshold 128 ^
 --edge_th1 300 ^
---edge_th2 10 ^
+--edge_th2 1000 ^
 --luminance_mode 1 ^
 --stdout true ^
  | ffmpeg -y -f rawvideo -pixel_format bgr24 -video_size 720x405 -framerate 29.97 -i - -an "out.mp4"
