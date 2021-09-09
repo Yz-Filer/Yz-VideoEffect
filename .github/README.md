@@ -8,5 +8,10 @@ Yz-Filerの画像効果を動画に対して行うツールです
 - アンインストールはディレクトリごと削除して下さい。
 
 ## 画像効果
- | 0:Edge<br>(エッジ) | 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化) | 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:sketch<br>(スケッチ風) |
-:----: | :----: | :----: | :----: | :----: | :----:
+ | 0:Edge<br>　　　　　　(エッジ)　　　　　　| 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化) |
+:----: | :----: | :----: 
+![](./Edge.jpg) | ![](./binarization.jpg) | ![](./Ternarization.jpg) 
+
+| 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:sketch<br>　　　　(スケッチ風)　　　　|
+ :----: | :----: | :----: 
+![](./Watercolor.jpg) | ![](./Blackboard.jpg) | ![](./sketch.jpg) 
