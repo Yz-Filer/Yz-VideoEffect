@@ -92,4 +92,3 @@ Yz-VideoEffect.exe ^
 最後の2行を変更してます。「--stdout」を「true」に変更し、ffmpegにデータを渡します。  
 「video_size」と「framerate」に「実行方法」で確認した「Width」「Height」と「fps」を指定して下さい。  
 尚、ffmpegの保存用オプションは、ffmpegの解説HPなどを参照してください。  
-ここでは、解説しないです。
