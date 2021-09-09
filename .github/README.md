@@ -25,8 +25,8 @@ Yz-Filerの画像効果を動画に対して行うツールです
 -b | --background | - | all | 背景画像のフルパス<br>Full path of background image file
 -w | --video_width | - | all | ビデオの最大幅(縮小用)<br>Video width
 -h | --video_height | - | all | ビデオの最大高(縮小用)<br>Video height
--x | --left | - | all | 背景画像上のビデオ左端(はみだせない)<br>Left
--y | --top | - | all | 背景画像上のビデオ上端(はみだせない)<br>Top
+-x | --left | - | all | 背景画像上のビデオ左端<br>(はみだせない)<br>Left
+-y | --top | - | all | 背景画像上のビデオ上端<br>(はみだせない)<br>Top
 -t | --threshold | - | Binarization | 2値化の閾値<br>threshold(0-255) (Default:128)
  |  |  |  | Watercolor | 水彩画風の適用度(%)<br>strength(0-100) (Default:70%)
  |  |  |  | Blackboard | 黒板アート風のノイズの閾値<br>noise threshold(0-255) (Default:8)
@@ -37,6 +37,6 @@ Yz-Filerの画像効果を動画に対して行うツールです
 -l | --luminance_mode | - | all | 輝度のアルゴリズム<br>0 : 最小/最大を0/255にし、平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCvのEqualizeHist<br>Luminance mode (0-2)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値(小さい程濃くなる)<br>gamma value (Default:0.3)
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image frame by frame (Default:false)
--z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output (Default:false)
+-z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
 
 
