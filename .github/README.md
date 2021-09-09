@@ -39,4 +39,7 @@ Yz-Filerの画像効果を動画に対して行うツールです
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
 
+## 実行方法
+
+## 保存方法
 
