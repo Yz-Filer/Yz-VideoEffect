@@ -36,7 +36,7 @@ Yz-Filerの画像効果を動画に対して行うツールです
 -p | --ternarization_th2 | - | Ternarization | 3値化の上限閾値(黒くなる)<br>下限との間がグレー<br>threshold2(0-255) (Default:170)
 -l | --luminance_mode | - | all | 輝度のアルゴリズム<br>0 : 最小/最大を0/255にし、平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCvのEqualizeHist<br>Luminance mode (0-2)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値(小さい程濃くなる)<br>gamma value (Default:0.3)
--n | --sketch_noise | - | Sketch | スケッチ風の時ノイズ(鉛筆の線)を更新するか<br>Updates the noise image frame by frame (Default:false)
+-n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image frame by frame (Default:false)
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output (Default:false)
 
 
