@@ -122,4 +122,7 @@ Yz-VideoEffect.exe ^
 - Fred's ImageMagick Scripts  
   画像効果のアルゴリズムを参考にさせて貰ってます。  
   非商用目的のみ無料で利用可  
+  ```
+  My scripts are available free of charge for non-commercial (non-profit) use, ONLY.
+  ```
   http://www.fmwconcepts.com/imagemagick/index.php
