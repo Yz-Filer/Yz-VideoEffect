@@ -108,7 +108,8 @@ Yz-VideoEffect.exe ^
   Copyright (c) 2021 Yz  
   Released under the MIT license  
   https://opensource.org/licenses/mit-license.php  
-  作者または著作権者は、本ソフトウェアに起因して被った直接的または間接的損害については一切責任を負わず、また保証/補償も出来ません
+  作者または著作権者は、本ソフトウェアに起因して被った直接的または間接的損害については一切責任を負わず、また保証/補償も出来ません  
+  以下のライブラリ類については、それぞれのライセンスに従ってください
   
 - OpenCVSharp  
   Apacheライセンス バージョン2.0  
@@ -117,4 +118,8 @@ Yz-VideoEffect.exe ^
 - OpenCV  
   Apacheライセンス バージョン2.0  
   https://github.com/opencv/opencv/blob/master/LICENSE
-  
+
+- Fred's ImageMagick Scripts  
+  画像効果のアルゴリズムを参考にさせて貰ってます。  
+  非商用目的のみ無料で利用可  
+  http://www.fmwconcepts.com/imagemagick/index.php
