@@ -127,3 +127,19 @@ Yz-VideoEffect.exe ^
   My scripts are available free of charge for non-commercial (non-profit) use, ONLY.
   ```
   http://www.fmwconcepts.com/imagemagick/index.php
+
+## 処理結果イメージ
+「ぱくたそ」さんが加工・公開OKだということなので使わせてもらいました。  
+
+| Watercolor (水彩画風) | Sketch (スケッチ風) |
+:----: | :----: 
+![](./sample/wc_ANJI.jpg) | ![](./sample/sk_ANJI.jpg) 
+![](./sample/wc_anjyu.jpg) | ![](./sample/sk_anjyu.jpg) 
+![](./sample/wc_aomidori.jpg) | ![](./sample/sk_aomidori.jpg) 
+![](./sample/wc_baby.jpg) | ![](./sample/sk_baby.jpg) 
+![](./sample/wc_J_nishinippori.jpg) | ![](./sample/sk_J_nishinippori.jpg) 
+![](./sample/wc_kanazawa.jpg) | ![](./sample/sk_kanazawa.jpg) 
+![](./sample/wc_nichinan.jpg) | ![](./sample/sk_nichinan.jpg) 
+![](./sample/wc_nonnu.jpg) | ![](./sample/sk_nonnu.jpg) 
+![](./sample/wc_OY.jpg) | ![](./sample/sk_OY.jpg) 
+![](./sample/wc_shikun.jpg) | ![](./sample/sk_shikun.jpg) 
