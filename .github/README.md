@@ -135,7 +135,7 @@ Yz-VideoEffect.exe ^
 ```
 ffmpeg -loop 1 -i "hoge.jpg" -vcodec libx264 -pix_fmt yuv420p -t 1 -r 30 "out.mp4"
 ```  
-  
+上記コマンドは、画像のサイズが縦・横ともに偶数じゃないとエラーになりますので気を付けてください。  
 | Watercolor (水彩画風) | Sketch (スケッチ風) |
 :----: | :----: 
 ![](./sample/wc_ANJI.jpg) | ![](./sample/sk_ANJI.jpg) 
