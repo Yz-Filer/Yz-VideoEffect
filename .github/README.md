@@ -129,7 +129,8 @@ Yz-VideoEffect.exe ^
   http://www.fmwconcepts.com/imagemagick/index.php
 
 ## 処理結果イメージ
-「ぱくたそ」さんが加工・公開OKだということなので使わせてもらいました。  
+「ぱくたそ（www.pakutaso.com）
+」さんが加工・公開OKだということなので使わせてもらいました。  
 
 | Watercolor (水彩画風) | Sketch (スケッチ風) |
 :----: | :----: 
