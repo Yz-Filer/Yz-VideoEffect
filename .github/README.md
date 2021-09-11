@@ -131,12 +131,11 @@ Yz-VideoEffect.exe ^
 ## 処理結果イメージ
 「ぱくたそ（www.pakutaso.com）
 」さんが加工・公開OKだということなので使わせてもらいました。  
-  
 以下のコマンドで、静止画から動画へ変換した後、処理してます。
 ```
-ffmpeg -loop 1 -i "hoge.jpg" -vcodec libx264 -pix_fmt yuv420p -t 1 -r 30 out.mp4
+ffmpeg -loop 1 -i "hoge.jpg" -vcodec libx264 -pix_fmt yuv420p -t 1 -r 30 "out.mp4"
 ```  
-
+  
 | Watercolor (水彩画風) | Sketch (スケッチ風) |
 :----: | :----: 
 ![](./sample/wc_ANJI.jpg) | ![](./sample/sk_ANJI.jpg) 
