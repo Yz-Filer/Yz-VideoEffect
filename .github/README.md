@@ -1,16 +1,19 @@
-# Yz-VideoEffect
+# Yz-VideoEffect / Yz-ImageEffect
 ## はじめに
-Yz-Filerの画像効果を動画に対して行うツールです。  
+Yz-Filerの画像効果を静止画 / 動画に対して行うツールです。  
 速度改善のために、OpenCVに変更してるので、処理結果が変わってると思います。
 
 ## インストール・設定
 - 動作環境は、Windows10 64bit .NET Framework 4.6.1以上となります。
 - レジストリは使用してません。
 - 任意のディレクトリに、「Yz-VideoEffect_1.0.zip」を解凍してください。
-- 解凍時に作成されたディレクトリに、「OpenCvSharpExtern.zip」を解凍して下さい
-- ウィルスチェックは実施済みです
+- 解凍時に作成されたディレクトリに、「OpenCvSharpExtern.zip」を解凍して下さい。
+- ウィルスチェックは実施済みです。
 - アンインストールはディレクトリごと削除して下さい。
-- 保存にはffmpegが必要となります
+- 動画の保存にはffmpegが必要となります。
+- Yz-VideoEffectは動画用でコマンドラインツールとなります。
+- Yz-ImageEffectは静止画用でGUIツールとなります。  
+  コマンドライン引数として静止画のフルパスが渡せるため、設定すればYz-Filerのマクロからも起動できます。
 
 ## 画像効果
  | 0:Edge<br>　　　　　　(エッジ)　　　　　　| 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化/漫画風) |
@@ -21,7 +24,7 @@ Yz-Filerの画像効果を動画に対して行うツールです。
  :----: | :----: | :----: 
 ![](./Watercolor.jpg) | ![](./Blackboard.jpg) | ![](./sketch.jpg) 
 
-## オプション
+## 動画用オプション（静止画の同様オプションは同義）
 | ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) |
 :--- | :--- | :---: | :---: | :--- 
 -m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch
@@ -44,7 +47,7 @@ Yz-Filerの画像効果を動画に対して行うツールです。
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
 
-## 実行方法
+## 実行方法（動画）
 オプションを複数指定する場合は、以下のような内容のbatファイルを作成した方が便利だと思います。  
 (batは「^」により、コマンドの途中で改行可能です)  
 (必須項目以外は指定しなくてもデフォルト設定で動作します)
@@ -82,7 +85,7 @@ Height:405
 「fps」と、「Back image」の「Width」「Height」が保存時に必要となります。  
 （実行を中断したい場合は、DOS窓をクリックしてCtr+Cキーを押して中断して下さい）
 
-## 保存方法
+## 保存方法（動画）
 「実行方法」で作成したbatを以下のように変更します
 ```
 Yz-VideoEffect.exe ^
@@ -100,8 +103,17 @@ Yz-VideoEffect.exe ^
 「video_size」と「framerate」に「実行方法」で確認した「Width」「Height」と「fps」を指定して下さい。  
 尚、ffmpegの保存用オプションは、ffmpegの解説HPなどを参照してください。  
 
+## 実行方法（静止画）
+GUIツールなので、Yz-ImageEffect.exeをそのまま起動するか、コマンドライン引数として静止画のフルパスを指定して下さい。  
+オプションの意味は動画と同じなので、動画のオプションを参照してください。  
+ただし、背景画像の指定はできません。  
+保存形式は、OpenCVが対応している形式であれば拡張子で自動判定されると思います。  
+幅や高さを変更した時、アスペクト比を維持するので幅か高さを変更すれば、もう一方は自動的に計算されます。  
+幅や高さを変更した時、画面に表示されてる画像は拡大/縮小されませんが解像度が変化しており、保存時には指定したサイズで保存されます。  
+画像効果の効きが悪い時、画像の幅を500～800くらいに落としてみて下さい。解像度が高いと写真っぽくなります。
+
 ## 制限など
-- 音声は出力されません。
+- 動画出力には音声は含まれません。
 - やっつけツールですんで、エラーハンドリングはやってません。
 
 ## ライブラリ類およびライセンス
@@ -133,11 +145,6 @@ Yz-VideoEffect.exe ^
 「ぱくたそ（www.pakutaso.com）
 」さんが加工・公開OKだということなので使わせてもらいました。  
 （下記画像の取り扱いについては、ばくたそさんの規約を守ってください）  
-以下のコマンドで、静止画から動画へ変換した後、処理してます。
-```
-ffmpeg -loop 1 -i "hoge.jpg" -vcodec libx264 -pix_fmt yuv420p -t 1 -r 30 "out.mp4"
-```  
-上記コマンドは、画像のサイズが縦・横ともに偶数じゃないとエラーになりますので気を付けてください。  
 | Watercolor (水彩画風) | Sketch (スケッチ風) |
 :----: | :----: 
 ![](./sample/wc_ANJI.jpg) | ![](./sample/sk_ANJI.jpg) 
