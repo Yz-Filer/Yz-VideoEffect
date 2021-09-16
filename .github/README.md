@@ -48,21 +48,35 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
 
 ## 実行方法（動画）
-オプションを複数指定する場合は、以下のような内容のbatファイルを作成した方が便利だと思います。  
-(batは「^」により、コマンドの途中で改行可能です)  
-(必須項目以外は指定しなくてもデフォルト設定で動作します)
-```
-Yz-VideoEffect.exe ^
---effect_mode 1 ^
---input "hoge.mp4" ^
---maxsize 0 ^
---threshold 128 ^
---edge_th1 300 ^
---edge_th2 1000 ^
---luminance_mode 1 ^
---stdout false
-```
-上記で作成したbatをDOS窓で実行すると、Windowが起動され動画が表示されます。  
+- 動画をファイルから取得  
+  オプションを複数指定する場合は、以下のような内容のbatファイルを作成した方が便利だと思います。  
+  (batは「^」により、コマンドの途中で改行可能です)  
+  (必須項目以外は指定しなくてもデフォルト設定で動作します)
+  ```
+  Yz-VideoEffect.exe ^
+  --effect_mode 1 ^
+  --input "hoge.mp4" ^
+  --maxsize 0 ^
+  --threshold 128 ^
+  --edge_th1 300 ^
+  --edge_th2 1000 ^
+  --luminance_mode 1 ^
+  --stdout false
+  ```
+  上記で作成したbatをDOS窓で実行すると、Windowが起動され動画が表示されます。  
+
+- 動画を標準入力から取得  
+  入力ファイル名に「PIPE:WxH,FPS」(W, H, FPSは数値)を指定した場合、標準入力から動画を取得します。  
+  以下は、事前にインターレース解除をffmpegで実施する例となります。
+  ```
+  ffmpeg -i "hoge.mp4" -an ^
+  -vf yadif=0:-1:1 ^
+  -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
+   | Yz-VideoEffect.exe ^
+  --effect_mode 5 ^
+  --input "PIPE:960x540,29.97" ^
+  --stdout false
+  ```
 このモード(--stdout false)では、動画を処理する都度、更新されるため再生速度は維持されません。  
 実行後、DOS窓に以下のような内容が表示されます。
 ```
@@ -119,6 +133,7 @@ GUIツールなので、Yz-ImageEffect.exeをそのまま起動するか、コ�
 ## 制限など
 - 動画出力には音声は含まれません。
 - 入力ファイルは、事前にインターレース解除をしておいてください。
+- 自分で撮影したビデオの場合、事前にノイズ除去や輝度・彩度などの補正もやっておいたほうが良いかもしれません。
 - やっつけツールですんで、エラーハンドリングはやってません。
 
 ## ライブラリ類およびライセンス
