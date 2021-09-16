@@ -113,7 +113,9 @@ Yz-VideoEffect.exe ^
 --edge_th2 1000 ^
 --luminance_mode 1 ^
 --stdout true ^
- | ffmpeg -y -f rawvideo -pixel_format bgr24 -video_size 720x405 -framerate 29.97 -i - -an -vcodec libx264 -pix_fmt yuv420p "out.mp4"
+ | ffmpeg -y -f rawvideo -pixel_format bgr24 ^
+ -video_size 720x405 -framerate 29.97 ^
+ -i - -an -vcodec libx264 -pix_fmt yuv420p "out.mp4"
 ```
 最後の2行を変更してます。「--stdout」を「true」に変更し、ffmpegにデータを渡します。  
 「video_size」と「framerate」に「実行方法」で確認した「Width」「Height」と「fps」を指定して下さい。  
