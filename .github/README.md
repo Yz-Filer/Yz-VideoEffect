@@ -133,6 +133,20 @@ GUIツールなので、Yz-ImageEffect.exeをそのまま起動するか、コ�
 　(縮小率が高い方優先)  
 ・ 画面に表示されてる画像は拡大/縮小されませんが解像度が変化しており、保存時には  
 　指定したサイズで保存されます。  
+ 
+ 
+尚、静止画で背景画像を指定したい場合、Yz-VideoEffectを使うことが出来ます。  
+```
+ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
+ | Yz-VideoEffect.exe ^
+--effect_mode 5 ^
+--input "PIPE:960x540,1" ^
+--background "background.jpg" ^
+--maxsize 1 ^
+--video_width 1000 ^
+--stdout true ^
+ | ffplay -f rawvideo -pixel_format bgr24 -video_size 1280x720 -i -
+```
 
 ## 制限など
 - 動画出力には音声は含まれません。
