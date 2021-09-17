@@ -146,7 +146,7 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
 --maxsize 1 ^
 --video_width 1000 ^
 --stdout true ^
- | ffplay -f rawvideo -pixel_format bgr24 -video_size 1280x720 -i -
+ | ffmpeg -y -f rawvideo -pixel_format bgr24 -video_size 1280x720 -i - -an -vframes 1 -f image2 "out.jpg"
 ```
 
 ## 制限など
