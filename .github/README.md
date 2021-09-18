@@ -48,9 +48,9 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 ## 動画用オプション（静止画の同様オプションは同義）
 | ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) |
 :--- | :--- | :---: | :---: | :--- 
--m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch
+-m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-5)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch
 -i | --input | true | all | 動画のフルパス<br>標準入力から取得する場合は、<br>「PIPE:WxH,FPS」を指定<br>Full path of video file
--s | --maxsize | - | all | 出力動画の最大サイズ<br>Maximum size<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080)
+-s | --maxsize | - | all | 出力動画の最大サイズ<br>Maximum size (0-2)<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080)
 -b | --background | - | all | 背景画像のフルパス<br>Full path of background image file
 -w | --video_width | - | all | ビデオの最大幅(縮小用)<br>Video width
 -h | --video_height | - | all | ビデオの最大高(縮小用)<br>Video height
@@ -63,8 +63,8 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 -v | --edge_th2 | - | Edge<br>binarization | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
 -o | --ternarization_th1 | - | Ternarization | 3値化の下限閾値(黒くなる範囲)<br>threshold1(0-255) (Default:85)
 -p | --ternarization_th2 | - | Ternarization | 3値化の上限閾値(白くなる範囲)<br>下限との間がグレー<br>threshold2(0-255) (Default:170)
--l | --luminance_mode | - | all | 輝度のアルゴリズム<br>0 : 最小/最大を0/255にし、平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist<br>Luminance mode (0-2)
--f | --blur | - | all | ぼかしフィルタ<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=0.5)<br>3 : Gaussian Blur (σ=1.0)<br>4 : Gaussian Blur (σ=1.5)<br>5 : Gaussian Blur (σ=2.0)<br>6 : Gaussian Blur (σ=2.5)<br>7 : Gaussian Blur (σ=3.0)<br>8 : Gaussian Blur (σ=3.5)<br>9 : Gaussian Blur (σ=4.0)<br>Blur mode (0-9)
+-l | --luminance_mode | - | all | 輝度のアルゴリズム<br>Luminance mode (0-2)<br>0 : 最小/最大を0/255にし、平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist
+-f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=0.5)<br>3 : Gaussian Blur (σ=1.0)<br>4 : Gaussian Blur (σ=1.5)<br>5 : Gaussian Blur (σ=2.0)<br>6 : Gaussian Blur (σ=2.5)<br>7 : Gaussian Blur (σ=3.0)<br>8 : Gaussian Blur (σ=3.5)<br>9 : Gaussian Blur (σ=4.0)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3)
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
