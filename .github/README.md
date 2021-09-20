@@ -102,6 +102,12 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
   --stdout false
   ```
   こちらも同じくDOS窓で実行して下さい。  
+  参考までに、ffmpegを使って事前に減色する場合は、以下のフィルタで出来るようです。  
+  上記の「-vf」の行と入れ替えると動作します。
+  （「-vf」と「-filter_complex」は同時に使えないようです）
+  ```
+  -filter_complex "split[a][b];[a]palettegen=max_colors=32:stats_mode=2[pal];[b][pal]paletteuse=dither=none:new=1" ^
+  ```
 
 - 画像効果の効きが悪い時  
 ・事前にインターレース解除をして下さい。  
