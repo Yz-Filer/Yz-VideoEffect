@@ -73,7 +73,7 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
 -c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更<br>effect fade in (1-last frame)<br>(source -> effect)
 -d | --fade_out | - | all | エフェクト画像から徐々にソース<br>画像に変更<br>effect fade out (1-last frame)<br>(effect -> source)
--e | --fade_rate | - | all | fade in / fade out のフレーム毎の変化率<br>fade change rate per frame (1-100)%<br>(Default:2)
+-e | --fade_rate | - | all | fade in / fade out のフレーム毎の<br>変化率(%)<br>fade change rate per frame (1-100)<br>(Default:2%)
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
 
 ## 実行方法（動画）
