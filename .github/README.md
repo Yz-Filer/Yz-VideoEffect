@@ -71,8 +71,8 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 -f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=0.5)<br>3 : Gaussian Blur (σ=1.0)<br>4 : Gaussian Blur (σ=1.5)<br>5 : Gaussian Blur (σ=2.0)<br>6 : Gaussian Blur (σ=2.5)<br>7 : Gaussian Blur (σ=3.0)<br>8 : Gaussian Blur (σ=3.5)<br>9 : Gaussian Blur (σ=4.0)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3)
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
--c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更<br>effect fade in (1-last frame)<br>(source -> effect)
--d | --fade_out | - | all | エフェクト画像から徐々にソース<br>画像に変更<br>effect fade out (1-last frame)<br>(effect -> source)
+-c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更（フレーム番号）<br>effect fade in (1-last frame)<br>(source -> effect)
+-d | --fade_out | - | all | エフェクト画像から徐々にソース<br>画像に変更（フレーム番号）<br>effect fade out (1-last frame)<br>(effect -> source)
 -e | --fade_rate | - | all | fade in / fade out のフレーム毎の<br>変化率(%)<br>fade change rate per frame (1-100)<br>(Default:2%)
 -z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
 
