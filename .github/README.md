@@ -237,7 +237,6 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
 「ぱくたそ（www.pakutaso.com）
 」さんが加工・公開OKだということなので使わせてもらいました。  
 （下記画像の取り扱いについては、ばくたそさんの規約を守ってください）  
-以下のサンプルは、あまりパラメータをいじってないので、パラメータを適切に設定すればよりそれっぽくなると思います。  
 | Watercolor<br>(水彩画風) | Sketch<br>(スケッチ風) | Anime<br>(アニメ風)
 :----: | :----: | :----: 
 <img src="./sample/wc_ANJI.jpg" width="250">|<img src="./sample/sk_ANJI.jpg" width="250">|<img src="./sample/an_ANJI.jpg" width="250">
