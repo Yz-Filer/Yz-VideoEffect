@@ -19,7 +19,7 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 
 | 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:Sketch<br>　　　　(スケッチ風)　　　　|
  :----: | :----: | :----: 
-<img src="./Watercolor.jpg" width="295">|<img src="./Blackboard.jpg" width="295">|<img src="./sketch.jpg" width="295">
+<img src="./Watercolor.jpg" width="250">|<img src="./Blackboard.jpg" width="250">|<img src="./sketch.jpg" width="250">
 
 | 6:Anime<br>(アニメ風) |
  :----: 
