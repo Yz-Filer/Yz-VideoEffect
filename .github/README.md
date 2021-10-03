@@ -19,7 +19,11 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 
 | 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:Sketch<br>　　　　(スケッチ風)　　　　|
  :----: | :----: | :----: 
-![](./Watercolor.jpg) | ![](./Blackboard.jpg) | ![](./sketch.jpg) 
+<img src="./Watercolor.jpg" width="295">|<img src="./Blackboard.jpg" width="295">|<img src="./sketch.jpg" width="295">
+
+| 6:Anime<br>(アニメ風) |
+ :----: 
+|<img src="./anime.jpg" width="295">|
 
 ## インストール・設定
 - 動作環境は、Windows10 64bit .NET Framework 4.6.1以上となります。
