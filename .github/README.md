@@ -236,15 +236,15 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
 」さんが加工・公開OKだということなので使わせてもらいました。  
 （下記画像の取り扱いについては、ばくたそさんの規約を守ってください）  
 以下のサンプルは、あまりパラメータをいじってないので、パラメータを適切に設定すればよりそれっぽくなると思います。  
-| Watercolor (水彩画風) | Sketch (スケッチ風) |
-:----: | :----: 
-![](./sample/wc_ANJI.jpg) | ![](./sample/sk_ANJI.jpg) 
-![](./sample/wc_anjyu.jpg) | ![](./sample/sk_anjyu.jpg) 
-![](./sample/wc_aomidori.jpg) | ![](./sample/sk_aomidori.jpg) 
-![](./sample/wc_baby.jpg) | ![](./sample/sk_baby.jpg) 
-![](./sample/wc_J_nishinippori.jpg) | ![](./sample/sk_J_nishinippori.jpg) 
-![](./sample/wc_kanazawa.jpg) | ![](./sample/sk_kanazawa.jpg) 
-![](./sample/wc_nichinan.jpg) | ![](./sample/sk_nichinan.jpg) 
-![](./sample/wc_nonnu.jpg) | ![](./sample/sk_nonnu.jpg) 
-![](./sample/wc_OY.jpg) | ![](./sample/sk_OY.jpg) 
-![](./sample/wc_shikun.jpg) | ![](./sample/sk_shikun.jpg) 
+| Watercolor<br>(水彩画風) | Sketch<br>(スケッチ風) | Anime<br>(アニメ風)
+:----: | :----: | :----: 
+<img src="./sample/wc_ANJI.jpg" width="250">|<img src="./sample/sk_ANJI.jpg" width="250">|<img src="./sample/an_ANJI.jpg" width="250">
+<img src="./sample/wc_anjyu.jpg" width="250">|<img src="./sample/sk_anjyu.jpg" width="250">|<img src="./sample/an_anjyu.jpg" width="250">
+<img src="./sample/wc_aomidori.jpg" width="250">|<img src="./sample/sk_aomidori.jpg" width="250">|<img src="./sample/an_aomidori.jpg" width="250">
+<img src="./sample/wc_baby.jpg" width="250">|<img src="./sample/sk_baby.jpg" width="250">|<img src="./sample/an_baby.jpg" width="250">
+<img src="./sample/wc_J_nishinippori.jpg" width="250">|<img src="./sample/sk_J_nishinippori.jpg" width="250">|<img src="./sample/an_J_nishinippori.jpg" width="250">
+<img src="./sample/wc_kanazawa.jpg" width="250">|<img src="./sample/sk_kanazawa.jpg" width="250">|<img src="./sample/an_kanazawa.jpg" width="250">
+<img src="./sample/wc_nichinan.jpg" width="250">|<img src="./sample/sk_nichinan.jpg" width="250">|<img src="./sample/an_nichinan.jpg" width="250">
+<img src="./sample/wc_nonnu.jpg" width="250">|<img src="./sample/sk_nonnu.jpg" width="250">|<img src="./sample/an_nonnu.jpg" width="250">
+<img src="./sample/wc_OY.jpg" width="250">|<img src="./sample/sk_OY.jpg" width="250">|<img src="./sample/an_OY.jpg" width="250">
+<img src="./sample/wc_shikun.jpg" width="250">|<img src="./sample/sk_shikun.jpg" width="250">|<img src="./sample/an_shikun.jpg" width="250">
