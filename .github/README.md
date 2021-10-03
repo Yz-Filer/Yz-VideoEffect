@@ -67,8 +67,9 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 -t | --threshold | - | Binarization | 2値化の閾値<br>threshold(0-255) (Default:128)
  |  |  |  | Watercolor | 水彩画風の適用度(%)<br>strength(0-100) (Default:70%)
  |  |  |  | Blackboard | 黒板アート風のノイズの閾値<br>noise threshold(0-255) (Default:8)
--u | --edge_th1 | - | Edge<br>binarization | エッジをつなげる設定値<br>(小さい程繋がる)<br>Edge threshold1 (Default:300)
--v | --edge_th2 | - | Edge<br>binarization | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
+ |  |  |  | Anime | アニメ風の減色設定値<br>color reduction parameter(0-255) (Default:64)
+-u | --edge_th1 | - | Edge<br>binarization<br>Anime | エッジをつなげる設定値<br>(小さい程繋がる)<br>Edge threshold1 (Default:300)
+-v | --edge_th2 | - | Edge<br>binarization<br>Anime | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
 -o | --ternarization_th1 | - | Ternarization | 3値化の下限閾値(黒くなる範囲)<br>threshold1(0-255) (Default:85)
 -p | --ternarization_th2 | - | Ternarization | 3値化の上限閾値(白くなる範囲)<br>下限との間がグレー<br>threshold2(0-255) (Default:170)
 -l | --luminance_mode | - | all | 輝度のアルゴリズム<br>Luminance mode (0-2)<br>0 : 最小/最大を0/255にし、平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist
@@ -201,6 +202,7 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
 - 自分で撮影した素材の場合、事前にノイズ除去や輝度・彩度などの補正もやっておいたほうが良いかもしれません。
 - 縦横比は維持しますが、アスペクト比（4：3や16：9など）は見てません。  
   ffmpegを活用してアスペクト比を維持するよう調整して下さい。  
+- アニメ風は動画では色がコロコロ変わるのでお勧めしません。  
 - やっつけツールですんで、エラーハンドリングはやってません。
 
 ## ライブラリ類およびライセンス
