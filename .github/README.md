@@ -23,7 +23,7 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 
 | 6:Anime<br>(アニメ風) |
  :----: 
-|<img src="./anime.jpg" width="295">|
+|<img src="./anime.jpg" width="250">|
 
 ## インストール・設定
 - 動作環境は、Windows10 64bit .NET Framework 4.6.1以上となります。
