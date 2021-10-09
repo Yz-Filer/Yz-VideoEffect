@@ -67,7 +67,7 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 -t | --threshold | - | Binarization | 2値化の閾値<br>threshold(0-255) (Default:128)
  |  |  |  | Watercolor | 水彩画風の適用度(%)<br>strength(0-100) (Default:70%)
  |  |  |  | Blackboard | 黒板アート風のノイズの閾値<br>noise threshold(0-255) (Default:8)
- |  |  |  | Anime | アニメ風の減色設定値<br>color reduction parameter<br>(0-255) (Default:64)
+ |  |  |  | Anime | アニメ風の減色設定値<br>color reduction parameter(0-255)<br> (Default:64)
 -u | --edge_th1 | - | Edge<br>binarization<br>Anime | エッジをつなげる設定値<br>(小さい程繋がる)<br>Edge threshold1 (Default:300)
 -v | --edge_th2 | - | Edge<br>binarization<br>Anime | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
 -o | --ternarization_th1 | - | Ternarization | 3値化の下限閾値(黒くなる範囲)<br>threshold1(0-255) (Default:85)
