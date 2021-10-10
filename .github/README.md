@@ -72,7 +72,7 @@ Yz-Filerの画像効果をパラメータを指定して静止画 / 動画に対
 -v | --edge_th2 | - | Edge<br>binarization<br>Anime | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
 -o | --ternarization_th1 | - | Ternarization | 3値化の下限閾値(黒くなる範囲)<br>threshold1(0-255) (Default:85)
 -p | --ternarization_th2 | - | Ternarization | 3値化の上限閾値(白くなる範囲)<br>下限との間がグレー<br>threshold2(0-255) (Default:170)
--l | --luminance_mode | - | all | 輝度のアルゴリズム<br>Luminance mode (0-2)<br>0 : 最小/最大を0/255にし平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist
+-l | --luminance_mode | - | all | 輝度のアルゴリズム<br>Luminance mode (0-3)<br>0 : 最小/最大を0/255にし平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist<br>3 : OpenCVのClahe
 -f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=0.5)<br>3 : Gaussian Blur (σ=1.0)<br>4 : Gaussian Blur (σ=1.5)<br>5 : Gaussian Blur (σ=2.0)<br>6 : Gaussian Blur (σ=2.5)<br>7 : Gaussian Blur (σ=3.0)<br>8 : Gaussian Blur (σ=3.5)<br>9 : Gaussian Blur (σ=4.0)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3)
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
