@@ -5,7 +5,10 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 対応している画像効果は、エッジ、2値化、3値化、水彩画風、黒板アート風、スケッチ風、アニメ風の7つです。  
 高価なソフトウェアを使わずに手軽に画像効果をつけることができます。  
 ※Ver1.1から、写真をアニメ風に変換するモード(effect_mode:6)を追加しました。  
-※Ver1.2から、アニメ風変換時の色破綻を軽減するモード(effect_mode:7, 8)を追加しました。  
+※Ver1.2から、以下の変更を行いました。  
+　・アニメ風変換時の色破綻を軽減するモード(effect_mode:7, 8)を追加しました。  
+　・3値化で輪郭線を描くように変更しました。  
+　・ぼかしとシャープフィルタを変更＆追加しました。  
 
 
 -	Yz-VideoEffectは動画用でコマンドラインツールとなります。  
@@ -73,12 +76,13 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
  |  |  |  | Watercolor | 水彩画風の適用度(%)<br>strength(0-100) (Default:70%)
  |  |  |  | Blackboard | 黒板アート風のノイズの閾値<br>noise threshold(0-255) (Default:8)
  |  |  |  | Anime | アニメ風の減色設定値<br>color reduction parameter(0-255)<br> (Default:64)
--u | --edge_th1 | - | Edge<br>binarization<br>Anime | エッジをつなげる設定値<br>(小さい程繋がる)<br>Edge threshold1 (Default:300)
--v | --edge_th2 | - | Edge<br>binarization<br>Anime | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
+-u | --edge_th1 | - | Edge<br>binarization<br>Ternarization<br>Anime | エッジをつなげる設定値<br>(小さい程繋がる)<br>Edge threshold1 (Default:300)
+-v | --edge_th2 | - | Edge<br>binarization<br>Ternarization<br>Anime | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
 -o | --ternarization_th1 | - | Ternarization | 3値化の下限閾値(黒くなる範囲)<br>threshold1(0-255) (Default:85)
 -p | --ternarization_th2 | - | Ternarization | 3値化の上限閾値(白くなる範囲)<br>下限との間がグレー<br>threshold2(0-255) (Default:170)
 -l | --luminance_mode | - | all | 輝度のアルゴリズム<br>Luminance mode (0-3)<br>0 : 最小/最大を0/255にし平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist<br>3 : OpenCVのClahe
--f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=0.5)<br>3 : Gaussian Blur (σ=1.0)<br>4 : Gaussian Blur (σ=1.5)<br>5 : Gaussian Blur (σ=2.0)<br>6 : Gaussian Blur (σ=2.5)<br>7 : Gaussian Blur (σ=3.0)<br>8 : Gaussian Blur (σ=3.5)<br>9 : Gaussian Blur (σ=4.0)
+-f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=1.0)<br>3 : Gaussian Blur (σ=2.0)<br>4 : Gaussian Blur (σ=3.0)<br>5 : Gaussian Blur (σ=4.0)<br>6 : FastGlobal SF (λ=4)<br>7 : FastGlobal SF (λ=10)<br>8 : FastGlobal SF (λ=16)<br>9 : FastGlobal SF (λ=22)
+-j | --sharpen | - | all | シャープ化フィルタ<br>Sharpen mode (0-8)<br>0 : Sharpen (0.5)<br>1 : Sharpen (1.0)<br>2 : Sharpen (1.5)<br>3 : UnsharpMask (1.0)<br>4 : UnsharpMask (4.0)<br>5 : UnsharpMask (7.0)<br>6 : DetailEnhance (6.0)<br>7 : DetailEnhance (12.0)<br>8 : DetailEnhance (18.0)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3)
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
 -c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更（フレーム番号）<br>effect fade in (1-last frame)<br>(source -> effect)
@@ -129,10 +133,11 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 - 画像効果の効きが悪い時  
 ・事前にインターレース解除をして下さい。  
 ・解像度が高いと写真っぽく見えやすいので、「--maxsize」を0にしてみて下さい。  
-・ぼかしフィルタを1や9など強めにしてみて下さい。  
+・ぼかしフィルタを強めにしてみて下さい。  
 ・事前に、コントラスト・輝度・彩度の調整やノイズ除去を実施してみて下さい。  
 ・アニメ風にする場合、effect_modeを7か8にすると、我慢すれば視聴できるかもしれません。  
 ・アニメ風の場合、ffmpegで明るめにしたり、彩度を上げたり、青みがかるように調整してみて下さい。  
+・アニメ風の場合、blurにFastGlobal SFを使うと境界が滑らかになるかもしれません。  
 
 - 保存のためのパラメータ確認  
 実行すると、DOS窓に以下のような内容が表示されます。
@@ -182,12 +187,13 @@ GUIツールなので、Yz-ImageEffect.exeをそのまま起動するか、コ�
 
 画像効果の効きが悪い時は、以下を試してみて下さい  
 ・解像度が高いと写真っぽく見えやすいので、画像の幅を500～800くらいに落としてみて下さい。  
-・ぼかしフィルタを1や9など強めにしてみて下さい。  
+・ぼかしフィルタを強めにしてみて下さい。  
 ・事前に、コントラスト・輝度・彩度の調整やノイズ除去を実施してみて下さい。  
 ・アニメ風の場合、画像編集ソフトで事前に編集するとそれっぽくなる場合があります。  
 　-> 明るめにしたり、彩度を上げたり、青みがかるように色を調整する  
 　-> 空を見栄えの良い空に差し替える  
 　-> 小物を貼り付けたり、目にアニメ目を貼り付け、アニメ化時に縮小する  
+・アニメ風の場合、blurにFastGlobal SFを使うと境界が滑らかになるかもしれません。  
 
 幅や高さを変更した時、  
 ・縦横比を維持するので幅か高さを変更すれば、もう一方は自動的に計算されます。  
@@ -221,7 +227,7 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
   ・まだ色がコロコロ変わりますが、我慢すれば視聴できるかもしれません。  
   ・色破綻軽減処理の影響でアニメというよりイラスト？絵画？っぽくなりました。  
   ・明るさの変動で色が破綻する場合、luminance_modeを3にしてみて下さい。  
-- 処理速度はeffect_mode 7,8を除き、SD画質が処理できるレベルを想定しています。高解像度にすると処理速度は遅くなります。
+- 処理速度はeffect_mode 7,8とDetailEnhanceを除き、SD画質が処理できるレベルを想定しています。高解像度にすると処理速度は遅くなります。
 - やっつけツールですんで、エラーハンドリングはやってません。
 
 ## ライブラリ類およびライセンス
