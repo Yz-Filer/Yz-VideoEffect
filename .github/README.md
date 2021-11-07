@@ -9,7 +9,8 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 　・アニメ風変換時の色破綻を軽減するモード(effect_mode:7, 8)を追加しました。  
 　・3値化で輪郭線を描くように変更しました。  
 　・ぼかしとシャープフィルタを変更＆追加しました。  
-
+※Ver1.3から、アニメ風の簡易モード（ほぼ減色だけのモード。effect_mode:9)を追加しました。  
+　また、アニメ風モード時にガンマ補正が出来るように修正しました。  
 
 -	Yz-VideoEffectは動画用でコマンドラインツールとなります。  
   （背景画像を指定して合成することができます）  
@@ -36,7 +37,7 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 ## インストール・設定
 - 動作環境は、Windows10 64bit .NET Framework 4.6.1以上となります。
 - レジストリは使用してません。
-- 任意のディレクトリに、「Yz-VideoEffect_1.2.zip」を解凍してください。
+- 任意のディレクトリに、「Yz-VideoEffect_1.3.zip」を解凍してください。
 - 解凍時に作成されたディレクトリに、「OpenCvSharpExtern.zip」を解凍して下さい。
 - ウィルスチェックは実施済みです。
 - アンインストールはディレクトリごと削除して下さい。
@@ -64,7 +65,7 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 ## 動画用オプション（静止画の同様オプションは同義）
 | ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) |
 :--- | :--- | :---: | :---: | :--- 
--m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-8)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8 : Anime
+-m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-9)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8,9 : Anime
 -i | --input | true | all | 動画のフルパス<br>標準入力から取得する場合は、<br>「PIPE:WxH,FPS」を指定<br>Full path of video file
 -s | --maxsize | - | all | 出力動画の最大サイズ<br>Maximum size (0-2)<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080)
 -b | --background | - | all | 背景画像のフルパス<br>Full path of background image file
@@ -84,6 +85,7 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 -f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=1.0)<br>3 : Gaussian Blur (σ=2.0)<br>4 : Gaussian Blur (σ=3.0)<br>5 : Gaussian Blur (σ=4.0)<br>6 : FastGlobal SF (λ=4)<br>7 : FastGlobal SF (λ=10)<br>8 : FastGlobal SF (λ=16)<br>9 : FastGlobal SF (λ=22)
 -j | --sharpen | - | all | シャープ化フィルタ<br>Sharpen mode (0-8)<br>0 : Sharpen (0.5)<br>1 : Sharpen (1.0)<br>2 : Sharpen (1.5)<br>3 : UnsharpMask (1.0)<br>4 : UnsharpMask (4.0)<br>5 : UnsharpMask (7.0)<br>6 : DetailEnhance (6.0)<br>7 : DetailEnhance (12.0)<br>8 : DetailEnhance (18.0)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3)
+ |  |  |  | Anime | アニメ風のガンマ値<br>(薄い色にする場合1より大きく)<br>gamma value (Default:1.0)
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
 -c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更（フレーム番号）<br>effect fade in (1-last frame)<br>(source -> effect)
 -d | --fade_out | - | all | エフェクト画像から徐々にソース<br>画像に変更（フレーム番号）<br>effect fade out (1-last frame)<br>(effect -> source)
@@ -135,9 +137,11 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 ・解像度が高いと写真っぽく見えやすいので、「--maxsize」を0にしてみて下さい。  
 ・ぼかしフィルタを強めにしてみて下さい。  
 ・事前に、コントラスト・輝度・彩度の調整やノイズ除去を実施してみて下さい。  
-・アニメ風にする場合、effect_modeを7か8にすると、我慢すれば視聴できるかもしれません。  
-・アニメ風の場合、ffmpegで明るめにしたり、彩度を上げたり、青みがかるように調整してみて下さい。  
-・アニメ風の場合、blurにFastGlobal SFを指定すると境界が滑らかになるかもしれません。  
+・アニメ風にする場合  
+　-> effect_modeを7～9にすると、我慢すれば視聴できるかもしれません。  
+　-> 色を薄く（sketch_gammaを1より大きく）するとイラストっぽく見えるかもしれません。  
+　-> ffmpegで彩度を上げたり、青みがかるように調整してみて下さい。  
+　-> blurにFastGlobal SFを指定すると境界が滑らかになるかもしれません。  
 
 - 保存のためのパラメータ確認  
 実行すると、DOS窓に以下のような内容が表示されます。
@@ -190,10 +194,12 @@ GUIツールなので、Yz-ImageEffect.exeをそのまま起動するか、コ�
 ・ぼかしフィルタを強めにしてみて下さい。  
 ・事前に、コントラスト・輝度・彩度の調整やノイズ除去を実施してみて下さい。  
 ・アニメ風の場合、画像編集ソフトで事前に編集するとそれっぽくなる場合があります。  
-　-> 明るめにしたり、彩度を上げたり、青みがかるように色を調整する  
+　-> 彩度を上げたり、青みがかるように色を調整する  
 　-> 空を見栄えの良い空に差し替える  
 　-> 小物を貼り付けたり、目にアニメ目を貼り付け、アニメ化時に縮小する  
-・アニメ風の場合、blurにFastGlobal SFを指定すると境界が滑らかになるかもしれません。  
+・アニメ風にする場合  
+　-> 色を薄く（sketch_gammaを1より大きく）するとイラストっぽく見えるかもしれません。  
+　-> blurにFastGlobal SFを指定すると境界が滑らかになるかもしれません。  
 
 幅や高さを変更した時、  
 ・縦横比を維持するので幅か高さを変更すれば、もう一方は自動的に計算されます。  
@@ -223,6 +229,7 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
 - 縦横比は維持しますが、アスペクト比（4：3や16：9など）は見てません。  
   ffmpegを活用してアスペクト比を維持するよう調整して下さい。  
 - アニメ風は、動画では色がコロコロ変わるのであまりお勧めできません。  
+  （effect_mode：9は、単純な減色＆ぼかし処理のため、色がコロコロ変わらないと思います）  
 - アニメ風のeffect_mode 7,8は、処理が重たくノッペリ感は減りますが、色破綻が軽減されます。  
   ・まだ色がコロコロ変わりますが、我慢すれば動画視聴できるかもしれません。  
   ・色破綻軽減処理の影響でアニメというよりイラスト？絵画？っぽくなりました。  
