@@ -85,7 +85,7 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 -f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=1.0)<br>3 : Gaussian Blur (σ=2.0)<br>4 : Gaussian Blur (σ=3.0)<br>5 : Gaussian Blur (σ=4.0)<br>6 : FastGlobal SF (λ=4)<br>7 : FastGlobal SF (λ=10)<br>8 : FastGlobal SF (λ=16)<br>9 : FastGlobal SF (λ=22)
 -j | --sharpen | - | all | シャープ化フィルタ<br>Sharpen mode (0-8)<br>0 : Sharpen (0.5)<br>1 : Sharpen (1.0)<br>2 : Sharpen (1.5)<br>3 : UnsharpMask (1.0)<br>4 : UnsharpMask (4.0)<br>5 : UnsharpMask (7.0)<br>6 : DetailEnhance (6.0)<br>7 : DetailEnhance (12.0)<br>8 : DetailEnhance (18.0)
 -g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3)
- |  |  |  | Anime | アニメ風のガンマ値<br>(薄い色にする場合1より大きく)<br>gamma value (Default:1.0)
+ |  |  |  | Anime | アニメ風のガンマ値<br>(1より大きいと色が薄くなる)<br>gamma value (Default:1.0)
 -n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
 -c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更（フレーム番号）<br>effect fade in (1-last frame)<br>(source -> effect)
 -d | --fade_out | - | all | エフェクト画像から徐々にソース<br>画像に変更（フレーム番号）<br>effect fade out (1-last frame)<br>(effect -> source)
