@@ -65,8 +65,8 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 
 ## 動画用オプション（静止画の同様オプションは同義）
 | ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) |
-:--- | :--- | :---: | :---: | :--- 
--m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-9)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8,9 : Anime
+:--- | :--- | :---: | :---: | :--- |
+-m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-9)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8,9 : Anime |
 -i | --input | true | all | 動画のフルパス<br>標準入力から取得する場合は、<br>「PIPE:WxH,FPS」を指定<br>Full path of video file
 -s | --maxsize | - | all | 出力動画の最大サイズ<br>Maximum size (0-2)<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080)
 -b | --background | - | all | 背景画像のフルパス<br>Full path of background image file
