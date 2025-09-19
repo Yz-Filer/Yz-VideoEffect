@@ -23,7 +23,7 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 
 ## 画像効果
 
-| 0:Edge<br>　　　　　　(エッジ) | 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化/漫画風) |
+| 0:Edge<br>(エッジ) | 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化/漫画風) |
  :----: | :----: | :----: 
  <img src=".github/Edge.jpg" width="250" /> | <img src=".github/binarization.jpg" width="250" /> | <img src=".github/Ternarization.jpg" width="250" />
 
