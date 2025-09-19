@@ -64,7 +64,7 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
   - コントラストが高すぎるまたは低すぎる素材
 
 ## 動画用オプション（静止画の同様オプションは同義）
-| ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) | 
+| ショート形式  (short) | ロング形式  (long) | 必須  (Required) | モード  (effect mode) | 説明  (description) | 
 :---- | :---- | :----: | :----: | :---- 
 -m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-9)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8,9 : Anime |
 -i | --input | true | all | 動画のフルパス<br>標準入力から取得する場合は、<br>「PIPE:WxH,FPS」を指定<br>Full path of video file |
