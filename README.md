@@ -67,31 +67,31 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 | ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) |
 :--- | :--- | :---: | :---: | :--- |
 -m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-9)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8,9 : Anime |
--i | --input | true | all | 動画のフルパス<br>標準入力から取得する場合は、<br>「PIPE:WxH,FPS」を指定<br>Full path of video file
--s | --maxsize | - | all | 出力動画の最大サイズ<br>Maximum size (0-2)<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080)
--b | --background | - | all | 背景画像のフルパス<br>Full path of background image file
--w | --video_width | - | all | ビデオの最大幅(縮小用)<br>Video width
--h | --video_height | - | all | ビデオの最大高(縮小用)<br>Video height
--x | --left | - | all | 背景画像上のビデオ左端<br>(はみだせない)<br>Left
--y | --top | - | all | 背景画像上のビデオ上端<br>(はみだせない)<br>Top
--t | --threshold | - | Binarization | 2値化の閾値<br>threshold(0-255) (Default:128)
- |  |  |  | Watercolor | 水彩画風の適用度(%)<br>strength(0-100) (Default:70%)
- |  |  |  | Blackboard | 黒板アート風のノイズの閾値<br>noise threshold(0-255) (Default:8)
- |  |  |  | Anime | アニメ風の減色設定値<br>color reduction parameter(0-255)<br> (Default:64)
--u | --edge_th1 | - | Edge<br>binarization<br>Ternarization<br>Anime | エッジをつなげる設定値<br>(小さい程繋がる)<br>Edge threshold1 (Default:300)
--v | --edge_th2 | - | Edge<br>binarization<br>Ternarization<br>Anime | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000)
--o | --ternarization_th1 | - | Ternarization | 3値化の下限閾値(黒くなる範囲)<br>threshold1(0-255) (Default:85)
--p | --ternarization_th2 | - | Ternarization | 3値化の上限閾値(白くなる範囲)<br>下限との間がグレー<br>threshold2(0-255) (Default:170)
--l | --luminance_mode | - | all | 輝度のアルゴリズム<br>Luminance mode (0-3)<br>0 : 最小/最大を0/255にし平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist<br>3 : OpenCVのClahe
--f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=1.0)<br>3 : Gaussian Blur (σ=2.0)<br>4 : Gaussian Blur (σ=3.0)<br>5 : Gaussian Blur (σ=4.0)<br>6 : FastGlobal SF (λ=4)<br>7 : FastGlobal SF (λ=10)<br>8 : FastGlobal SF (λ=16)<br>9 : FastGlobal SF (λ=22)
--j | --sharpen | - | all | シャープ化フィルタ<br>Sharpen mode (0-8)<br>0 : Sharpen (0.5)<br>1 : Sharpen (1.0)<br>2 : Sharpen (1.5)<br>3 : UnsharpMask (1.0)<br>4 : UnsharpMask (4.0)<br>5 : UnsharpMask (7.0)<br>6 : DetailEnhance (6.0)<br>7 : DetailEnhance (12.0)<br>8 : DetailEnhance (18.0)
--g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3)
- |  |  |  | Anime | アニメ風のガンマ値<br>(1より大きいと色が薄くなる)<br>gamma value (Default:1.0)
--n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false)
--c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更（フレーム番号）<br>effect fade in (1-last frame)<br>(source -> effect)
--d | --fade_out | - | all | エフェクト画像から徐々にソース<br>画像に変更（フレーム番号）<br>effect fade out (1-last frame)<br>(effect -> source)
--e | --fade_rate | - | all | fade in / fade out のフレーム毎の<br>変化率(%)<br>fade change rate per frame (1-100)<br>(Default:2%)
--z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false)
+-i | --input | true | all | 動画のフルパス<br>標準入力から取得する場合は、<br>「PIPE:WxH,FPS」を指定<br>Full path of video file |
+-s | --maxsize | - | all | 出力動画の最大サイズ<br>Maximum size (0-2)<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080) |
+-b | --background | - | all | 背景画像のフルパス<br>Full path of background image file |
+-w | --video_width | - | all | ビデオの最大幅(縮小用)<br>Video width |
+-h | --video_height | - | all | ビデオの最大高(縮小用)<br>Video height |
+-x | --left | - | all | 背景画像上のビデオ左端<br>(はみだせない)<br>Left |
+-y | --top | - | all | 背景画像上のビデオ上端<br>(はみだせない)<br>Top |
+-t | --threshold | - | Binarization | 2値化の閾値<br>threshold(0-255) (Default:128) |
+ |  |  |  | Watercolor | 水彩画風の適用度(%)<br>strength(0-100) (Default:70%) |
+ |  |  |  | Blackboard | 黒板アート風のノイズの閾値<br>noise threshold(0-255) (Default:8) |
+ |  |  |  | Anime | アニメ風の減色設定値<br>color reduction parameter(0-255)<br> (Default:64) |
+-u | --edge_th1 | - | Edge<br>binarization<br>Ternarization<br>Anime | エッジをつなげる設定値<br>(小さい程繋がる)<br>Edge threshold1 (Default:300) |
+-v | --edge_th2 | - | Edge<br>binarization<br>Ternarization<br>Anime | エッジ検出の設定値<br>(小さい程検出する)<br>Edge threshold2 (Default:1000) |
+-o | --ternarization_th1 | - | Ternarization | 3値化の下限閾値(黒くなる範囲)<br>threshold1(0-255) (Default:85) |
+-p | --ternarization_th2 | - | Ternarization | 3値化の上限閾値(白くなる範囲)<br>下限との間がグレー<br>threshold2(0-255) (Default:170) |
+-l | --luminance_mode | - | all | 輝度のアルゴリズム<br>Luminance mode (0-3)<br>0 : 最小/最大を0/255にし平坦化<br>1 : 上下2%をカットし上と同じ<br>2 : OpenCVのEqualizeHist<br>3 : OpenCVのClahe |
+-f | --blur | - | all | ぼかしフィルタ<br>Blur mode (0-9)<br>0 : Median Blur (ksize=3)<br>1 : Median Blur (ksize=5)<br>2 : Gaussian Blur (σ=1.0)<br>3 : Gaussian Blur (σ=2.0)<br>4 : Gaussian Blur (σ=3.0)<br>5 : Gaussian Blur (σ=4.0)<br>6 : FastGlobal SF (λ=4)<br>7 : FastGlobal SF (λ=10)<br>8 : FastGlobal SF (λ=16)<br>9 : FastGlobal SF (λ=22) |
+-j | --sharpen | - | all | シャープ化フィルタ<br>Sharpen mode (0-8)<br>0 : Sharpen (0.5)<br>1 : Sharpen (1.0)<br>2 : Sharpen (1.5)<br>3 : UnsharpMask (1.0)<br>4 : UnsharpMask (4.0)<br>5 : UnsharpMask (7.0)<br>6 : DetailEnhance (6.0)<br>7 : DetailEnhance (12.0)<br>8 : DetailEnhance (18.0) |
+-g | --sketch_gamma | - | Sketch | スケッチ風のガンマ値<br>(小さい程濃くなる)<br>gamma value (Default:0.3) |
+ |  |  |  | Anime | アニメ風のガンマ値<br>(1より大きいと色が薄くなる)<br>gamma value (Default:1.0) |
+-n | --sketch_noise | - | Sketch | スケッチ風の時ノイズを更新するか<br>Updates the noise image<br> frame by frame (Default:false) |
+-c | --fade_in | - | all | ソース画像から徐々にエフェクト<br>画像に変更（フレーム番号）<br>effect fade in (1-last frame)<br>(source -> effect) |
+-d | --fade_out | - | all | エフェクト画像から徐々にソース<br>画像に変更（フレーム番号）<br>effect fade out (1-last frame)<br>(effect -> source) |
+-e | --fade_rate | - | all | fade in / fade out のフレーム毎の<br>変化率(%)<br>fade change rate per frame (1-100)<br>(Default:2%) |
+-z | --stdout | - | all | 標準出力に出力するか<br>Output to standard output<br>(Default:false) |
 
 ## 実行方法（動画）
 このモード(--stdout false)では、動画を処理する都度、更新されるため再生速度は維持されません。  
