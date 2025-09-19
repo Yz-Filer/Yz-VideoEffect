@@ -24,7 +24,7 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 ## 画像効果
  | 0:Edge<br>　　　　　　(エッジ)　　　　　　| 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化/漫画風) |
 :----: | :----: | :----: 
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/Edge.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/binarization.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/Ternarization.jpg" width="250">
+<img src=".github/Edge.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/binarization.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/Ternarization.jpg" width="250">
 
 | 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:Sketch<br>　　　　(スケッチ風)　　　　|
  :----: | :----: | :----: 
