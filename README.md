@@ -29,11 +29,11 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 
 | 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:Sketch<br>　　　　(スケッチ風)　　　　|
  :----: | :----: | :----: 
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/Watercolor.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/Blackboard.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sketch.jpg" width="250">
+<img src=".github/Watercolor.jpg" width="250">|<img src=".github/Blackboard.jpg" width="250">|<img src=".github/sketch.jpg" width="250">
 
 | 6:Anime<br>(アニメ風) |
  :----: 
-|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/anime.jpg" width="250">|
+<img src=".github/anime.jpg" width="250"/>
 
 ## インストール・設定
 - 動作環境は、Windows10 64bit .NET Framework 4.6.1以上となります。
