@@ -64,10 +64,9 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
   - コントラストが高すぎるまたは低すぎる素材
 
 ## 動画用オプション（静止画の同様オプションは同義）
-| ショート形式(short) | ロング形式(long) | 必須(Required) | モード(effect mode) | 説明(description) | 
+| ショート形式<br>(short) | ロング形式<br>(long) | 必須<br>(Required) | モード<br>(effect mode) | 説明<br>(description) | 
 :--- | :--- | :---: | :---: | :--- 
--m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-9)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8,9 : Anime 
-
+-m | --effect_mode | true | all | 画像効果の種類を数字で指定<br>Effect mode (0-9)<br> 0 : Edge<br> 1 : binarization<br> 2 : Ternarization<br> 3 : Watercolor<br> 4 : Blackboard<br> 5 : Sketch<br>6,7,8,9 : Anime |
 -i | --input | true | all | 動画のフルパス<br>標準入力から取得する場合は、<br>「PIPE:WxH,FPS」を指定<br>Full path of video file |
 -s | --maxsize | - | all | 出力動画の最大サイズ<br>Maximum size (0-2)<br> 0 : SD (720x480)(Default)<br> 1 : HD (1280x720)<br> 2 : FHD (1920x1080) |
 -b | --background | - | all | 背景画像のフルパス<br>Full path of background image file |
@@ -273,13 +272,13 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
 （掲載画像の取り扱いについては、ばくたそさんの規約を守ってください）  
 | Watercolor<br>(水彩画風) | Sketch<br>(スケッチ風) | Anime<br>(アニメ風)
 :----: | :----: | :----: 
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_ANJI.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_ANJI.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_ANJI.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_anjyu.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_anjyu.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_anjyu.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_aomidori.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_aomidori.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_aomidori.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_baby.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_baby.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_baby.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_J_nishinippori.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_J_nishinippori.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_J_nishinippori.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_kanazawa.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_kanazawa.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_kanazawa.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_nichinan.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_nichinan.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_nichinan.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_nonnu.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_nonnu.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_nonnu.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_OY.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_OY.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_OY.jpg" width="250">
-<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/wc_shikun.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/sk_shikun.jpg" width="250">|<img src="https://github.com/Yz-Filer/Yz-VideoEffect/blob/main/.github/sample/an_shikun.jpg" width="250">
+<img src=".github/sample/wc_ANJI.jpg" width="250"/>|<img src=".github/sample/sk_ANJI.jpg" width="250"/>|<img src=".github/sample/an_ANJI.jpg" width="250"/>
+<img src=".github/sample/wc_anjyu.jpg" width="250"/>|<img src=".github/sample/sk_anjyu.jpg" width="250"/>|<img src=".github/sample/an_anjyu.jpg" width="250"/>
+<img src=".github/sample/wc_aomidori.jpg" width="250"/>|<img src=".github/sample/sk_aomidori.jpg" width="250"/>|<img src=".github/sample/an_aomidori.jpg" width="250"/>
+<img src=".github/sample/wc_baby.jpg" width="250"/>|<img src=".github/sample/sk_baby.jpg" width="250"/>|<img src=".github/sample/an_baby.jpg" width="250"/>
+<img src=".github/sample/wc_J_nishinippori.jpg" width="250"/>|<img src=".github/sample/sk_J_nishinippori.jpg" width="250"/>|<img src=".github/sample/an_J_nishinippori.jpg" width="250"/>
+<img src=".github/sample/wc_kanazawa.jpg" width="250"/>|<img src=".github/sample/sk_kanazawa.jpg" width="250"/>|<img src=".github/sample/an_kanazawa.jpg" width="250"/>
+<img src=".github/sample/wc_nichinan.jpg" width="250"/>|<img src=".github/sample/sk_nichinan.jpg" width="250"/>|<img src=".github/sample/an_nichinan.jpg" width="250">
+<img src=".github/sample/wc_nonnu.jpg" width="250"/>|<img src=".github/sample/sk_nonnu.jpg" width="250"/>|<img src=".github/sample/an_nonnu.jpg" width="250"/>
+<img src=".github/sample/wc_OY.jpg" width="250"/>|<img src=".github/sample/sk_OY.jpg" width="250"/>|<img src=".github/sample/an_OY.jpg" width="250"/>
+<img src=".github/sample/wc_shikun.jpg" width="250"/>|<img src=".github/sample/sk_shikun.jpg" width="250"/>|<img src=".github/sample/an_shikun.jpg" width="250"/>
