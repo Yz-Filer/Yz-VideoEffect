@@ -25,15 +25,15 @@ Yz-Filerの画像効果をパラメータを指定して写真 / 動画に対し
 
 | 0:Edge<br>     (エッジ) | 1:binarization<br>(2値化) | 2:Ternarization<br>(3値化/漫画風) |
  :----: | :----: | :----: 
- <img src=".github/Edge.jpg" width="250" /> | <img src=".github/binarization.jpg" width="250" /> | <img src=".github/Ternarization.jpg" width="250" />
+ <img src="image/Edge.jpg" width="250" /> | <img src="image/binarization.jpg" width="250" /> | <img src="image/Ternarization.jpg" width="250" />
 
 | 3:Watercolor<br>(水彩画風) | 4:Blackboard<br>(黒板アート風) | 5:Sketch<br>　　　　(スケッチ風)　　　　|
  :----: | :----: | :----: 
- <img src=".github/Watercolor.jpg" width="250" /> | <img src=".github/Blackboard.jpg" width="250" /> | <img src=".github/sketch.jpg" width="250" />
+ <img src="image/Watercolor.jpg" width="250" /> | <img src="image/Blackboard.jpg" width="250" /> | <img src="image/sketch.jpg" width="250" />
 
 | 6:Anime<br>(アニメ風) |
  :----: |
- <img src=".github/anime.jpg" width="250" /> |
+ <img src="image/anime.jpg" width="250" /> |
 
 ## インストール・設定
 - 動作環境は、Windows10 64bit .NET Framework 4.6.1以上となります。
@@ -272,13 +272,13 @@ ffmpeg -i "hoge.jpg" -an -vcodec rawvideo -f image2pipe -pix_fmt bgr24 - ^
 （掲載画像の取り扱いについては、ばくたそさんの規約を守ってください）  
 | Watercolor<br>(水彩画風) | Sketch<br>(スケッチ風) | Anime<br>(アニメ風)
 :----: | :----: | :----: 
-<img src=".github/sample/wc_ANJI.jpg" width="250"/>|<img src=".github/sample/sk_ANJI.jpg" width="250"/>|<img src=".github/sample/an_ANJI.jpg" width="250"/>
-<img src=".github/sample/wc_anjyu.jpg" width="250"/>|<img src=".github/sample/sk_anjyu.jpg" width="250"/>|<img src=".github/sample/an_anjyu.jpg" width="250"/>
-<img src=".github/sample/wc_aomidori.jpg" width="250"/>|<img src=".github/sample/sk_aomidori.jpg" width="250"/>|<img src=".github/sample/an_aomidori.jpg" width="250"/>
-<img src=".github/sample/wc_baby.jpg" width="250"/>|<img src=".github/sample/sk_baby.jpg" width="250"/>|<img src=".github/sample/an_baby.jpg" width="250"/>
-<img src=".github/sample/wc_J_nishinippori.jpg" width="250"/>|<img src=".github/sample/sk_J_nishinippori.jpg" width="250"/>|<img src=".github/sample/an_J_nishinippori.jpg" width="250"/>
-<img src=".github/sample/wc_kanazawa.jpg" width="250"/>|<img src=".github/sample/sk_kanazawa.jpg" width="250"/>|<img src=".github/sample/an_kanazawa.jpg" width="250"/>
-<img src=".github/sample/wc_nichinan.jpg" width="250"/>|<img src=".github/sample/sk_nichinan.jpg" width="250"/>|<img src=".github/sample/an_nichinan.jpg" width="250">
-<img src=".github/sample/wc_nonnu.jpg" width="250"/>|<img src=".github/sample/sk_nonnu.jpg" width="250"/>|<img src=".github/sample/an_nonnu.jpg" width="250"/>
-<img src=".github/sample/wc_OY.jpg" width="250"/>|<img src=".github/sample/sk_OY.jpg" width="250"/>|<img src=".github/sample/an_OY.jpg" width="250"/>
-<img src=".github/sample/wc_shikun.jpg" width="250"/>|<img src=".github/sample/sk_shikun.jpg" width="250"/>|<img src=".github/sample/an_shikun.jpg" width="250"/>
+<img src="image/sample/wc_ANJI.jpg" width="250"/>|<img src="image/sample/sk_ANJI.jpg" width="250"/>|<img src="image/sample/an_ANJI.jpg" width="250"/>
+<img src="image/sample/wc_anjyu.jpg" width="250"/>|<img src="image/sample/sk_anjyu.jpg" width="250"/>|<img src="image/sample/an_anjyu.jpg" width="250"/>
+<img src="image/sample/wc_aomidori.jpg" width="250"/>|<img src="image/sample/sk_aomidori.jpg" width="250"/>|<img src="image/sample/an_aomidori.jpg" width="250"/>
+<img src="image/sample/wc_baby.jpg" width="250"/>|<img src="image/sample/sk_baby.jpg" width="250"/>|<img src="image/sample/an_baby.jpg" width="250"/>
+<img src="image/sample/wc_J_nishinippori.jpg" width="250"/>|<img src="image/sample/sk_J_nishinippori.jpg" width="250"/>|<img src="image/sample/an_J_nishinippori.jpg" width="250"/>
+<img src="image/sample/wc_kanazawa.jpg" width="250"/>|<img src="image/sample/sk_kanazawa.jpg" width="250"/>|<img src="image/sample/an_kanazawa.jpg" width="250"/>
+<img src="image/sample/wc_nichinan.jpg" width="250"/>|<img src="image/sample/sk_nichinan.jpg" width="250"/>|<img src="image/sample/an_nichinan.jpg" width="250">
+<img src="image/sample/wc_nonnu.jpg" width="250"/>|<img src="image/sample/sk_nonnu.jpg" width="250"/>|<img src="image/sample/an_nonnu.jpg" width="250"/>
+<img src="image/sample/wc_OY.jpg" width="250"/>|<img src="image/sample/sk_OY.jpg" width="250"/>|<img src="image/sample/an_OY.jpg" width="250"/>
+<img src="image/sample/wc_shikun.jpg" width="250"/>|<img src="image/sample/sk_shikun.jpg" width="250"/>|<img src="image/sample/an_shikun.jpg" width="250"/>
